@@ -108,18 +108,4 @@ darkmode.addEventListener("click", function () {
     darkmode.textContent = "🌞 Day mode";
     document.body.style.backgroundColor = "yellow";
   }
-  if (score[activeplayer] >= 20) {
-    rolldice.disabled = playing;
-    hold.disabled = playing;
-    diceEl.classList.add("hidden");
-
-    document
-      .querySelector(`.player--${activeplayer}`)
-      .classList.add("player--winner");
-    document
-      .querySelector(`.player--${activeplayer}`)
-      .classList.remove("player--active");
-  } else {
-    switchplayer();
-  }
 });
